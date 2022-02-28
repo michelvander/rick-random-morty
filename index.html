@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Rick Random Morty</title>
+        <script src="rickFunctions.js">
+            
+        </script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="divImg">
+            <div class="divMain">
+                <div class="divConf">
+                    <h1>Clique abaixo para gerar um Episódio aleatório de Rick e Morty!</h1>
+                    <button id="btnProcessar" class="btnProcess" onclick="generate()">Gerar</button>
+                    <button id="btnReprocessar" class="btnProcess" style="display: none;" onclick="generateAgain()">Gerar Novamente</button>
+                </div>
+                <div id="loading" class="divConf hide">
+                    <p>Carregando...</p>
+                    <img id="portalLoading" src="giphy.gif" alt="Be patient..." />
+                </div>
+                <div id="result" class="divConf hide">
+                    <span id="season">Temporada: </span><br>
+                    <span id="episode">Episódio: </span><br>
+                    <span id="title">Título: </span><br><br>
+                    <span>Assistir em:</span>
+                    <br><br>
+                    <button id="btnNetflix" onclick="goToEpisode(1)"><b>Netflix</b></button>
+                    <br><br>
+                    <button id="btnHbo" onclick="goToEpisode(2)"><b>HBO Max</b></button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
